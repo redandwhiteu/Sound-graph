@@ -436,7 +436,7 @@ color: white;
       <rect>
        <x>15</x>
        <y>285</y>
-       <width>150</width>
+       <width>305</width>
        <height>30</height>
       </rect>
      </property>
@@ -468,48 +468,6 @@ QPushButton:pressed {
      </property>
      <property name="text">
       <string>Старт</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="stop_btn">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>170</x>
-       <y>285</y>
-       <width>150</width>
-       <height>30</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Roboto Slab</family>
-       <pointsize>10</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-	background-color: #2D2D3D;
-	border: 1px solid #FFD700;
-	color: white;
-}
-
-QPushButton:hover {
-	background-color: #B59900;
-}
-
- QPushButton:!hover {
-	background-color: #2D2D3D;
-}
-
-QPushButton:pressed {
-	background-color: #FFD700;
-}
-</string>
-     </property>
-     <property name="text">
-      <string>Стоп</string>
      </property>
     </widget>
     <widget class="QPushButton" name="graphics_btn">
@@ -854,6 +812,32 @@ color: white</string>
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
      </property>
     </widget>
+    <widget class="QLineEdit" name="reg_seconds">
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>320</y>
+       <width>305</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Roboto Slab Medium</family>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 2px solid #FFD700;
+color: white</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string>Введите число секунд записи</string>
+     </property>
+    </widget>
     <zorder>rec_type_label</zorder>
     <zorder>reg_label_5</zorder>
     <zorder>reg_label_4</zorder>
@@ -866,7 +850,6 @@ color: white</string>
     <zorder>path_sound_label</zorder>
     <zorder>rec_type_box</zorder>
     <zorder>start_btn</zorder>
-    <zorder>stop_btn</zorder>
     <zorder>graphics_btn</zorder>
     <zorder>model_type_box</zorder>
     <zorder>reg_label_1</zorder>
@@ -877,6 +860,7 @@ color: white</string>
     <zorder>reg_2</zorder>
     <zorder>reg_label_3</zorder>
     <zorder>reg_3</zorder>
+    <zorder>reg_seconds</zorder>
    </widget>
    <widget class="Line" name="line_3">
     <property name="geometry">

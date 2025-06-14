@@ -1,11 +1,7 @@
 import pyaudio
 import wave
 
-RECORDING = True
-
 def recording(index, seconds):
-    global RECORDING
-    RECORDING = True
     p = pyaudio.PyAudio()
     stream = p.open(format = pyaudio.paInt16,
                     channels = 2,
@@ -29,7 +25,3 @@ def recording(index, seconds):
     wf.setframerate(44100)
     wf.writeframes(b''.join(frames))
     wf.close()
-
-def stop_recording():
-    global RECORDING
-    RECORDING = False

@@ -3,7 +3,7 @@ import sys
 import sounddevice as sd
 from PyQt5 import QtWidgets, uic
 from PyQt5.QtWidgets import *
-from src.recording import stop_recording, recording
+from src.recording import recording
 
 
 class Main(QMainWindow):

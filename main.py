@@ -64,7 +64,7 @@ class Main(QMainWindow):
         elif box_id == 1:
             devices = sd.query_devices()
             for dev in devices:
-                if dev['max_input_channels'] >= 1:
+                if dev['max_input_channels'] >= 1 and self.rec_type_box.findText(dev['name']) == -1:
                     self.rec_type_box.addItem(dev['name'])
 
         else:

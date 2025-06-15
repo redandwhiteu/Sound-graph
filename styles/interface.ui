@@ -957,6 +957,81 @@ color: white</string>
      <enum>Qt::Vertical</enum>
     </property>
    </widget>
+   <widget class="QLabel" name="fq_sp">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>65</y>
+      <width>610</width>
+      <height>140</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="sp">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>225</y>
+      <width>610</width>
+      <height>140</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="wf">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>385</y>
+      <width>610</width>
+      <height>140</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="name_2">
+    <property name="geometry">
+     <rect>
+      <x>339</x>
+      <y>5</y>
+      <width>615</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto Slab SemiBold</family>
+      <pointsize>28</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #FFD700; background-color: #2D2D3D</string>
+    </property>
+    <property name="text">
+     <string>Результаты обработки:</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
    <zorder>settings</zorder>
    <zorder>line</zorder>
    <zorder>icon</zorder>
@@ -966,6 +1041,10 @@ color: white</string>
    <zorder>line_5</zorder>
    <zorder>line_6</zorder>
    <zorder>line_2</zorder>
+   <zorder>fq_sp</zorder>
+   <zorder>sp</zorder>
+   <zorder>wf</zorder>
+   <zorder>name_2</zorder>
   </widget>
  </widget>
  <resources/>

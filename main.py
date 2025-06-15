@@ -1,9 +1,14 @@
 import sys
+import os
 
 import sounddevice as sd
 from PyQt5 import QtWidgets, uic
+from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import *
+from src.frequency_spectrum import draw_frequency_spectrum
 from src.recording import recording
+from src.spectrogram import draw_spectrogram
+from src.waveform import draw_waveform
 
 
 class Main(QMainWindow):
@@ -16,11 +21,14 @@ class Main(QMainWindow):
     def __init__(self):
         super(Main, self).__init__()
         uic.loadUi('styles/interface.ui', self)
+        os.mkdir('tmp')
         self.choise_event(0)
         self.path_btn.clicked.connect(self.getting_file_path)
         self.input_type_box.currentIndexChanged.connect(lambda: self.choise_event(0))
         self.rec_type_box.currentIndexChanged.connect(lambda: self.choise_event(1))
-        self.start_btn.clicked.connect(lambda: recording(self.get_index(), self.reg_seconds.text()))
+        self.start_btn.clicked.connect(lambda: self.path_sound_label.setText(recording(self.get_index(),
+                                                                                       self.reg_seconds.text())))
+        self.graphics_btn.clicked.connect(lambda: self.drawing())
 
     def getting_file_path(self):
         self.path_sound_label.setText(QtWidgets.QFileDialog.getOpenFileName()[0])
@@ -78,6 +86,14 @@ class Main(QMainWindow):
         for dev in devices:
             if dev['name'] == self.input_type_box.currentText():
                 return dev['name']
+
+    def drawing(self):
+        path_fq_sp = draw_frequency_spectrum(self.path_sound_label.text())
+        path_sp = draw_spectrogram(self.path_sound_label.text())
+        path_wave = draw_waveform(self.path_sound_label.text())
+        self.fq_sp.setPixmap(QPixmap(path_fq_sp))
+        self.sp.setPixmap(QPixmap(path_sp))
+        self.wf.setPixmap(QPixmap(path_wave))
 
 
 def except_hook(cls, exception, traceback):

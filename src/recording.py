@@ -1,6 +1,9 @@
 import pyaudio
 import wave
 
+from datetime import datetime
+
+
 def recording(index, seconds):
     p = pyaudio.PyAudio()
     stream = p.open(format = pyaudio.paInt16,
@@ -19,9 +22,12 @@ def recording(index, seconds):
     stream.close()
     p.terminate()
 
-    wf = wave.open('tmp/sound.wav', 'wb')
+    file_name = datetime.now().strftime('%Y%m%d-%H%M%S')
+    wf = wave.open(f'tmp/record_{file_name}.wav', 'wb')
     wf.setnchannels(2)
     wf.setsampwidth(p.get_sample_size(pyaudio.paInt16))
     wf.setframerate(44100)
     wf.writeframes(b''.join(frames))
     wf.close()
+
+    return f'tmp/record_{file_name}.wav'

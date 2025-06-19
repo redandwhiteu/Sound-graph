@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>960</width>
-    <height>540</height>
+    <width>335</width>
+    <height>560</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -21,14 +21,14 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>960</width>
-    <height>540</height>
+    <width>335</width>
+    <height>560</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>960</width>
-    <height>540</height>
+    <width>335</width>
+    <height>560</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -46,7 +46,7 @@
      <rect>
       <x>0</x>
       <y>55</y>
-      <width>1024</width>
+      <width>335</width>
       <height>1</height>
      </rect>
     </property>
@@ -134,7 +134,7 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>120</y>
+       <y>125</y>
        <width>315</width>
        <height>50</height>
       </rect>
@@ -266,7 +266,7 @@ QComboBox QAbstractItemView {
       <string notr="true">color: #FFD700; background-color: #2D2D3D</string>
      </property>
      <property name="text">
-      <string>2. Настроки типа вывода</string>
+      <string>2. Настройки типа вывода</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -477,7 +477,7 @@ QPushButton:pressed {
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>440</y>
+       <y>510</y>
        <width>316</width>
        <height>30</height>
       </rect>
@@ -838,6 +838,112 @@ color: white</string>
       <string>Введите число секунд записи</string>
      </property>
     </widget>
+    <widget class="QLabel" name="sopt_label_3">
+     <property name="geometry">
+      <rect>
+       <x>2</x>
+       <y>395</y>
+       <width>330</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Roboto Slab</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #FFD700; background-color: #2D2D3D</string>
+     </property>
+     <property name="text">
+      <string>3. Настройки отображения</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="output_type_label">
+     <property name="geometry">
+      <rect>
+       <x>2</x>
+       <y>415</y>
+       <width>330</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Roboto Slab</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #FFD700; background-color: #2D2D3D</string>
+     </property>
+     <property name="text">
+      <string>Выберите вывод:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="output_type_box">
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>440</y>
+       <width>305</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Roboto Slab</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #2D2D3D;
+border: 1px solid #FFD700;
+color: white;
+</string>
+     </property>
+     <property name="editable">
+      <bool>false</bool>
+     </property>
+     <property name="currentText">
+      <string>Амплитудный график</string>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <item>
+      <property name="text">
+       <string>Амплитудный график</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Спектрограмма</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Частотный спектр</string>
+      </property>
+     </item>
+    </widget>
+    <zorder>output_type_label</zorder>
     <zorder>rec_type_label</zorder>
     <zorder>reg_label_5</zorder>
     <zorder>reg_label_4</zorder>
@@ -861,6 +967,8 @@ color: white</string>
     <zorder>reg_label_3</zorder>
     <zorder>reg_3</zorder>
     <zorder>reg_seconds</zorder>
+    <zorder>sopt_label_3</zorder>
+    <zorder>output_type_box</zorder>
    </widget>
    <widget class="Line" name="line_3">
     <property name="geometry">
@@ -957,79 +1065,80 @@ color: white</string>
      <enum>Qt::Vertical</enum>
     </property>
    </widget>
-   <widget class="QLabel" name="fq_sp">
+   <widget class="Line" name="line_7">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>65</y>
-      <width>610</width>
-      <height>140</height>
+      <x>10</x>
+      <y>400</y>
+      <width>315</width>
+      <height>1</height>
      </rect>
     </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLabel" name="sp">
-    <property name="geometry">
-     <rect>
-      <x>340</x>
-      <y>225</y>
-      <width>610</width>
-      <height>140</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLabel" name="wf">
-    <property name="geometry">
-     <rect>
-      <x>340</x>
-      <y>385</y>
-      <width>610</width>
-      <height>140</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLabel" name="name_2">
-    <property name="geometry">
-     <rect>
-      <x>339</x>
-      <y>5</y>
-      <width>615</width>
-      <height>50</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Roboto Slab SemiBold</family>
-      <pointsize>28</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
+    <property name="autoFillBackground">
+     <bool>false</bool>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: #FFD700; background-color: #2D2D3D</string>
+     <string notr="true">border: 1px solid #FFD700;</string>
     </property>
-    <property name="text">
-     <string>Результаты обработки:</string>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
     </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
+   </widget>
+   <widget class="Line" name="line_8">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>400</y>
+      <width>1</width>
+      <height>110</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 1px solid #FFD700;</string>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_9">
+    <property name="geometry">
+     <rect>
+      <x>325</x>
+      <y>400</y>
+      <width>1</width>
+      <height>110</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 1px solid #FFD700;</string>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_10">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>510</y>
+      <width>316</width>
+      <height>1</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 1px solid #FFD700;</string>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
     </property>
    </widget>
    <zorder>settings</zorder>
@@ -1041,10 +1150,10 @@ color: white</string>
    <zorder>line_5</zorder>
    <zorder>line_6</zorder>
    <zorder>line_2</zorder>
-   <zorder>fq_sp</zorder>
-   <zorder>sp</zorder>
-   <zorder>wf</zorder>
-   <zorder>name_2</zorder>
+   <zorder>line_7</zorder>
+   <zorder>line_8</zorder>
+   <zorder>line_9</zorder>
+   <zorder>line_10</zorder>
   </widget>
  </widget>
  <resources/>
